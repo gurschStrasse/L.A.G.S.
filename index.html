@@ -4,50 +4,74 @@
     <title>Lag (2026:123) om Gursch</title>
     <style>
         body { 
-            font-family: Georgia, serif; 
+            font-family: Arial, sans-serif; 
             line-height: 1.6; 
             margin: 0; 
             display: flex; 
-            background: #000; /* Behåller den svarta stilen */
-            color: #fff;
+            background: #000; /* Bakgrunden blir svart som på bilden */
+            color: #ccc;
         }
         
-        /* Menyn på vänster sida */
+        /* Menyn på vänster sida - Nu i mörk stil */
         .sidebar {
             width: 250px;
             position: fixed; 
             height: 100vh;
             padding: 20px;
-            background: #111; /* Mörkgrå meny */
-            border-right: 1px solid #333;
+            background: #000;
+            border-right: 1px solid #222;
             overflow-y: auto;
+            font-size: 11px;
         }
 
-        .sidebar h2 { font-family: Arial, sans-serif; font-size: 16px; color: #fff; }
+        .sidebar h2 { font-size: 14px; color: #fff; text-transform: uppercase; }
         .sidebar a { 
             display: block; 
-            color: #448aff; 
+            color: #888; 
             text-decoration: none; 
-            font-size: 14px; 
             margin-bottom: 10px; 
         }
+        .sidebar a:hover { color: #fff; }
 
-        /* Själva lagtexten - FIXAD MARGINAL */
-        .document { 
-            margin-left: 290px; 
+        /* Själva lagtexten - Centrerad med svarta marginaler */
+        .content { 
+            margin-left: 270px; 
+            margin-right: 320px; /* Plats för referensboxarna till höger */
             padding: 40px; 
             max-width: 700px;
             background: #000;
             min-height: 100vh;
         }
 
-        h1 { font-family: Arial, sans-serif; font-size: 24px; border-bottom: 2px solid #fff; }
-        h3 { border-bottom: 1px solid #333; padding-top: 20px; color: #fff; }
+        h1 { font-size: 26px; border-bottom: 2px solid #fff; color: #fff; margin-top: 0; }
+        h3 { border-top: 1px solid #333; padding-top: 20px; margin-top: 40px; color: #fff; }
         .nr { font-weight: bold; color: #fff; }
-        .paragraf { margin-bottom: 20px; color: #ccc; }
         
-        /* Den gula boxen */
-        .yellow-box {
+        /* Den gula rutan från bilden */
+        .yellow-info {
             background: #fff9c4;
             color: #000;
             padding: 15px;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+
+        /* Högerkolumnen med de grå boxarna */
+        .sidebar-right {
+            width: 300px;
+            position: fixed;
+            right: 0;
+            padding: 20px;
+            height: 100vh;
+        }
+        .ref-box {
+            border: 1px solid #333;
+            background: #0a0a0a;
+            margin-bottom: 20px;
+            font-size: 11px;
+        }
+        .ref-header {
+            background: #1a1a1a;
+            padding: 5px 10px;
+            border-bottom: 1px solid #333;
+            display: flex;

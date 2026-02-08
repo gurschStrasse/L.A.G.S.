@@ -69,20 +69,7 @@
         .ref-content { padding: 10px; color: #448aff; line-height: 1.4; }
 
         /* Modal/Delsida för Rättsfall */
-        #rattsfall-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.98);
-            z-index: 10000;
-            overflow-y: auto;
-            padding: 40px;
-        }
-        .modal-inner { max-width: 800px; margin: 0 auto; padding: 40px; }
-        .close-link { color: #888; text-decoration: none; font-size: 13px; border: 1px solid #444; padding: 5px 10px; }
+
 
         /* Textstyling */
         h1 { font-size: 26px; color: #fff; margin-bottom: 5px; }
@@ -180,32 +167,23 @@
         <div style="height: 400px;"></div>
     </div>
 
-    <div class="sidebar-right">
-        <div class="ref-box">
-            <div class="ref-header"><span>Rättsfall</span></div>
-            <div class="ref-content">
-                <b>Högsta Domstolen</b><br>
-                <a href="javascript:void(0)" onclick="openModal()" style="color: #448aff;">NJA 2025 s. 133</a><br>
-                "Påstraßningen i Gröna Tornrummet"
+   <div class="sidebar-right">
+    <div class="ref-box">
+        <div class="ref-header"><span>Vägledande avgörande</span></div>
+        <div class="ref-content">
+            <b style="color:#fff; font-size:12px;">NJA 2025 s. 133</b>
+            <p style="color:#888; margin: 5px 0;">"Påstraßningen i Gröna Tornrummet"</p>
+            
+            <div style="border-top: 1px solid #333; margin: 10px 0; padding-top: 10px; color: #bbb; font-style: italic;">
+                <b>Sammanfattning:</b> HD fastställer att Straßes utslagsröst är en hörnsten för spelets stabilitet. Jäv kan endast anses som "grovt" vid bevisad manipulation eller systematisk partiskhet.
             </div>
+            
+            <a href="rattsfall.html" style="color: #448aff; text-decoration: underline; font-weight: bold;">
+                Läs hela rättsfallet →
+            </a>
         </div>
     </div>
-
-    <div id="rattsfall-modal">
-        <div class="modal-inner">
-            <a href="javascript:void(0)" onclick="closeModal()" class="close-link">← Tillbaka</a>
-            <h1 style="margin-top:20px;">NJA 2025 s. 133</h1>
-            <p><i>"Påstraßningen i Gröna Tornrummet"</i></p>
-            <hr border="0" style="border-top:1px solid #333; margin:20px 0;">
-            <p>Högsta Domstolen konstaterar att <b>Gursch</b> är ett spel baserat på förtroende och tradition vid Juridicum i Lund. Domstolen finner att innehavet av utslagsröst för Straße är en hörnsten i lagstiftningen för att undvika långdragna processer.</p>
-            <p>Jäv kan endast anses som "grovt" om det föreligger bevisad manipulation eller uppenbart partiska beslut som strider mot spelets anda. I det aktuella fallet i Gröna Tornrummet fanns inget stöd för att Strasse handlat i strid med god gursch-sed.</p>
-        </div>
-    </div>
-
-    <script>
-        function openModal() { document.getElementById("rattsfall-modal").style.display = "block"; }
-        function closeModal() { document.getElementById("rattsfall-modal").style.display = "none"; }
-    </script>
+</div>
 
 </body>
 </html>

@@ -48,3 +48,146 @@
             right: 0;
             height: 100vh;
             padding: 20px;
+            border-left: 1px solid #222;
+            background: #050505;
+        }
+        .ref-box {
+            border: 1px solid #333;
+            background: #111;
+            margin-bottom: 20px;
+            font-size: 11px;
+        }
+        .ref-header {
+            background: #222;
+            padding: 6px 10px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-weight: bold;
+        }
+        .ref-content { padding: 10px; color: #448aff; line-height: 1.4; }
+        .ref-content b { color: #aaa; display: block; margin-bottom: 4px; }
+
+        /* Textstyling */
+        h1 { font-size: 26px; color: #fff; margin-bottom: 5px; }
+        .abbr { color: #666; font-size: 14px; margin-bottom: 30px; }
+        .meta { font-size: 12px; color: #888; margin-bottom: 20px; line-height: 1.6; }
+        .meta b { color: #aaa; width: 100px; display: inline-block; }
+
+        .yellow-box {
+            background: #fff9c4;
+            color: #000;
+            padding: 15px;
+            margin-bottom: 30px;
+            font-size: 13px;
+            line-height: 1.4;
+            border-left: 5px solid #f1c40f;
+        }
+
+        h2.kapitel-rubrik { 
+            border-top: 1px solid #333; 
+            padding-top: 30px; 
+            margin-top: 50px; 
+            color: #fff; 
+            font-size: 20px;
+        }
+        .paragraf { margin-bottom: 25px; line-height: 1.7; padding: 5px; }
+        .paragraf-nr { font-weight: bold; color: #fff; margin-right: 10px; }
+        .stycke { display: block; margin-top: 10px; margin-left: 35px; color: #bbb; }
+
+        .principer {
+            border: 1px solid #444;
+            padding: 15px;
+            margin-bottom: 30px;
+            font-style: italic;
+            font-size: 13px;
+            color: #aaa;
+            background: #080808;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar-left">
+        <h2>Innehållsförteckning</h2>
+        <a href="#allman">Allmänna principer</a>
+        <a href="#kap1">1 kap. Inledande bestämmelser</a>
+        <a href="#kap2">2 kap. Spelets utformning</a>
+        <a href="#kap3">3 kap. Mini-game</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Gurschbalk (2026:123)</h1>
+        <div class="abbr">Förkortning: GB</div>
+
+        <div class="meta">
+            <b>Departement</b> Juridiska Fakulteten, Lunds Universitet<br>
+            <b>Utfärdad</b> 2026-02-08<br>
+            <b>Ikraft</b> Omedelbart
+        </div>
+
+        <div class="yellow-box">
+            <b>Notis:</b> Denna balk ersätter samtliga tidigare muntliga överenskommelser. Vid spel på "Västgöta" eller "Lunds" äger GB företräde.
+        </div>
+
+        <h2 id="allman" class="kapitel-rubrik">Allmänna principer</h2>
+        <div class="principer">
+            • <b>Den som ger sig in i leken, leken tåla</b> (återfinns i 2 §)<br>
+            • <b>Acta fabula est, plaudite</b> – Om en spelare vill lämna spelet måste denne informera om sin avsikt och spela 3 avslutande rundor.<br>
+            • <b>Ad infernos (till dödsriket)</b> – Minoritetsregel för att få höja insatsen.<br>
+            • <b>Jävskontroll</b> – Vid tvist om regeltolkning äger prejudikat företräde. Vid oenighet äger Straße utslagsröst, såvida inte grovt jäv föreligger.
+        </div>
+
+        <h2 id="kap1" class="kapitel-rubrik">1 kap. Inledande bestämmelser</h2>
+        
+        <div class="paragraf">
+            <span class="paragraf-nr">1 §</span> Gurschbalken (GB) är tillämplig vid ett parti gursch med 2 eller fler deltagare varav samtliga från Juristprogrammet på Lunds universitet.
+            <span class="stycke">Vid spel med utomstående ska reglerna i denna balk tillämpas ifall de övriga spelarna informerats om detta samt att majoriteten av spelarna går på Juristprogrammet på Lunds universitet.</span>
+        </div>
+
+        <div class="paragraf">
+            <span class="paragraf-nr">2 §</span> Lagen är primär och vad som stadgas i andra lagar gäller ej vid tillämpning av denna balk om inte annat avtalats eller föreskrivs i brottsbalken.
+        </div>
+
+        <div class="paragraf">
+            <span class="paragraf-nr">3 §</span> Definitioner:
+            <span class="stycke"><b>Flopp:</b> Är det sista kortet som tilldelas var och en i partiet och kortet ska vara synligt för alla.</span>
+            <span class="stycke"><b>Sak:</b> När man tvingas lägga sitt lägsta kort som svar.</span>
+            <span class="stycke"><b>Slask/Kask:</b> När en spelare byter samtliga kort på handen utan att ha vunnit floppen.</span>
+            <span class="stycke"><b>Willys (Självscanning):</b> Damer i kortleken identifieras som Willys-kort.</span>
+            <span class="stycke"><b>Victor Cream (Krämer):</b> Knegtar identifieras som Victor Cream-kort.</span>
+        </div>
+
+        <h2 id="kap2" class="kapitel-rubrik">2 kap. Spelets utformning</h2>
+        <div class="paragraf">
+            <span class="paragraf-nr">1 §</span> Vinner gör den som går ut på det lägsta värdet.
+        </div>
+        <div class="paragraf">
+            <span class="paragraf-nr">4 §</span> Spelaren med högst värde på sitt öppna kort har vunnit floppen. Floppvinnaren bestämmer antalet kort varje spelare får byta.
+        </div>
+
+        <div style="height: 400px;"></div>
+    </div>
+
+    <div class="sidebar-right">
+        <div class="ref-box">
+            <div class="ref-header"><span>Rättsfall</span> <span>1</span></div>
+            <div class="ref-content">
+                <b>Högsta Domstolen</b>
+                <a href="#" style="color: #448aff; text-decoration: none;">NJA 2025 s. 133</a><br>
+                "Påstraßningen i Gröna Tornrummet"
+            </div>
+        </div>
+        
+        <div class="ref-box">
+            <div class="ref-header"><span>Korshänvisningar</span></div>
+            <div class="ref-content" style="color: #666;">
+                Jävskontroll (Allm. principer)<br>
+                Prejudikat (1 kap. 1 §)
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

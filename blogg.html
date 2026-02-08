@@ -55,17 +55,46 @@
             margin-bottom: 15px;
             font-weight: bold;
         }
-        
-        .post-content {
-            line-height: 1.7;
-            color: #bbb;
-            font-size: 15px;
-        }
 
-        /* VIDEO-CONTAINER (Anpassad för stående format/mobilvideo) */
+        /* RANKING LISTA */
+        .ranking-box {
+            background: #111;
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        .ranking-title {
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: block;
+            border-bottom: 1px solid #222;
+            padding-bottom: 8px;
+        }
+        .ranking-list { list-style: none; padding: 0; margin: 0; }
+        .ranking-item { padding: 8px 0; border-bottom: 1px solid #1a1a1a; display: flex; align-items: center; }
+        .ranking-item:last-child { border-bottom: none; }
+        .rank-num { font-weight: bold; margin-right: 15px; width: 25px; color: #448aff; }
+        .rank-1 { color: #ffd700; } /* Guld */
+        .rank-2 { color: #c0c0c0; } /* Silver */
+        .rank-3 { color: #cd7f32; } /* Brons */
+
+        /* BILD */
+        .post-image {
+            width: 100%;
+            height: auto;
+            margin: 25px 0;
+            border: 1px solid #333;
+        }
+        
+        /* VIDEO-CONTAINER */
         .video-wrapper {
             position: relative;
-            padding-bottom: 177.78%; /* Anpassat för 9:16 format (stående) */
+            padding-bottom: 177.78%; 
             height: 0;
             overflow: hidden;
             margin-bottom: 40px;
@@ -94,10 +123,10 @@
 
     <nav class="top-bar">
         <a href="index.html" style="font-weight: bold; color: #000;">lagen.nu</a>
-            <a href="index.html">Lagar</a>
-            <a href="rattsfall.html">Rättsfall</a>
-            <a href="forarbeten.html">Förarbeten</a>
-            <a href="begrepp.html">Begrepp</a>
+        <a href="index.html">Lagar</a>
+        <a href="rattsfall.html">Rättsfall</a>
+        <a href="forarbeten.html">Förarbeten</a>
+        <a href="begrepp.html">Begrepp</a>
         <a href="blogg.html" class="active">Nyheter</a>
     </nav>
 
@@ -109,7 +138,21 @@
             <div class="post-title">Gursch Master Januari 2026 avgjort</div>
             
             <div class="post-content">
-                <p>Efter en intensiv turnering med publikrekord och oerhörd spänning kan vi nu stolt presentera resultatet från Gursch Master Januari 2026. Nedan följer tre exklusiva intervjuer från finalkvällen.</p>
+                <p>Efter en intensiv turnering med publikrekord och oerhörd spänning kan vi nu stolt presentera resultatet från Gursch Master Januari 2026.</p>
+
+                <img src="top4januari.jpeg" alt="Topp 4 Gursch Master" class="post-image">
+
+                <div class="ranking-box">
+                    <span class="ranking-title">Officiell Ranking: Top 4</span>
+                    <ul class="ranking-list">
+                        <li class="ranking-item"><span class="rank-num rank-1">1.</span> John Gidefjord</li>
+                        <li class="ranking-item"><span class="rank-num rank-2">2.</span> EliGo (Nils Elias Olsson)</li>
+                        <li class="ranking-item"><span class="rank-num rank-3">3.</span> Anton Nordström</li>
+                        <li class="ranking-item"><span class="rank-num rank-3">3.</span> Nalle (Carl Greve)</li>
+                    </ul>
+                </div>
+
+                <p>Nedan följer de tre exklusiva intervjuerna från finalkvällen.</p>
                 
                 <span class="video-label">Intervju 1: Vinnarintervju</span>
                 <div class="video-wrapper">
@@ -119,7 +162,7 @@
                     </iframe>
                 </div>
 
-                <span class="video-label">Intervju 2: EliGo blir till EliRedO för nästa månads mästerskap</span>
+                <span class="video-label">Intervju 2: EliGo blir till EliRedO</span>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1163081887?badge=0&autopause=0&player_id=0&app_id=58479" 
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
@@ -127,7 +170,7 @@
                     </iframe>
                 </div>
 
-                <span class="video-label">Intervju 3: Vinsten flög iväg från flygaren</span>
+                <span class="video-label">Intervju 3: Vinsten flög iväg</span>
                 <div class="video-wrapper">
                     <iframe src="https://player.vimeo.com/video/1163081918?badge=0&autopause=0&player_id=0&app_id=58479" 
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
@@ -136,9 +179,8 @@
                 </div>
             </div>
         </article>
-
     </div>
-    
+
     <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>

@@ -4,80 +4,35 @@
     <meta charset="UTF-8">
     <title>Gurschbalken (2026:123)</title>
     <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px; /* Gör att man inte hamnar bakom nav-baren när man klickar på länkar */
-        }
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            background-color: #000; 
-            color: #eee;
-        }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #000; color: #eee; }
 
-        /* --- NAVIGATION ÖVERST --- */
+        /* NAVIGATION ÖVERST */
         nav.top-bar {
-            background: #ffffff; 
-            padding: 12px 40px; 
-            display: flex; 
-            gap: 25px; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            border-bottom: 1px solid #ddd;
+            background: #ffffff; padding: 12px 40px; display: flex; gap: 25px; 
+            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #ddd;
         }
-        nav.top-bar a { 
-            color: #666; 
-            text-decoration: none; 
-            font-size: 14px; 
-        }
-        nav.top-bar a.active { 
-            color: #000; 
-            font-weight: bold; 
-            border-bottom: 2px solid #000;
-        }
+        nav.top-bar a { color: #666; text-decoration: none; font-size: 14px; }
+        nav.top-bar a.active { color: #000; font-weight: bold; border-bottom: 2px solid #000; }
 
-        /* --- LAYOUT WRAPPER --- */
-        .page-wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
+        .page-wrapper { display: flex; justify-content: space-between; }
 
-        /* --- MENYER --- */
+        /* MENYER */
         .sidebar-left {
-            width: 220px;
-            position: fixed;
-            top: 45px;
-            height: calc(100vh - 45px);
-            background: #000;
-            border-right: 1px solid #222;
-            padding: 20px;
-            font-size: 11px;
-            overflow-y: auto;
+            width: 220px; position: fixed; top: 45px; height: calc(100vh - 45px);
+            background: #000; border-right: 1px solid #222; padding: 20px; font-size: 11px; overflow-y: auto;
         }
         .sidebar-left h2 { font-size: 13px; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
         .sidebar-left a { display: block; color: #888; text-decoration: none; margin-bottom: 8px; }
         .sidebar-left a:hover { color: #fff; text-decoration: underline; }
 
         .sidebar-right {
-            width: 280px;
-            position: fixed;
-            right: 0;
-            top: 45px;
-            height: calc(100vh - 45px);
-            padding: 20px;
-            border-left: 1px solid #222;
-            background: #050505;
+            width: 280px; position: fixed; right: 0; top: 45px; height: calc(100vh - 45px);
+            padding: 20px; border-left: 1px solid #222; background: #050505;
         }
 
-        /* --- HUVUDTEXT --- */
-        .main-content {
-            margin-left: 260px; 
-            margin-right: 320px; 
-            max-width: 700px;
-            padding: 40px;
-        }
-
+        /* HUVUDTEXT */
+        .main-content { margin-left: 260px; margin-right: 320px; max-width: 700px; padding: 40px; }
         h1 { font-size: 26px; color: #fff; margin-bottom: 5px; }
         .abbr { color: #666; font-size: 14px; margin-bottom: 30px; }
         .meta { font-size: 12px; color: #888; margin-bottom: 20px; line-height: 1.6; }
@@ -89,7 +44,6 @@
         .stycke { display: block; margin-top: 10px; margin-left: 35px; color: #bbb; }
         .principer { border: 1px solid #444; padding: 15px; margin-bottom: 30px; font-style: italic; font-size: 13px; color: #aaa; background: #080808; }
 
-        /* --- REFERENSBOX --- */
         .ref-box { border: 1px solid #333; background: #111; margin-bottom: 20px; font-size: 11px; }
         .ref-header { background: #222; padding: 6px 10px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; color: #fff; font-weight: bold; }
         .ref-content { padding: 10px; color: #448aff; line-height: 1.4; }
@@ -106,7 +60,6 @@
     </nav>
 
     <div class="page-wrapper">
-
         <div class="sidebar-left">
             <h2>Innehållsförteckning</h2>
             <a href="#allman">Allmänna principer</a>
@@ -125,41 +78,63 @@
                 <b>Ikraft</b> Omedelbart
             </div>
 
-            <div class="yellow-box">
-                <b>Notis:</b> Denna balk ersätter samtliga tidigare muntliga överenskommelser.
-            </div>
+            <div class="yellow-box"><b>Notis:</b> Denna balk ersätter samtliga tidigare muntliga överenskommelser.</div>
 
             <h2 id="allman" class="kapitel-rubrik">Allmänna principer</h2>
             <div class="principer">
                 • <b>Den som ger sig in i leken, leken tåla</b> (återfinns i 2 §)<br>
                 • <b>Acta fabula est, plaudite</b> – Om en spelare vill lämna spelet måste denne informera om sin avsikt och spela 3 avslutande rundor.<br>
                 • <b>Ad infernos (till dödsriket)</b> – Minoritetsregel för att få höja insatsen.<br>
-                • <b>1 §</b> Vid tvist om regeltolkning äger prejudikat företräde, vid oenighet äger Straße utslagsröst såvida inte grovt jäv föreligger.
+                • <b>1 § Jävskontroll:</b> Vid tvist om regeltolkning äger prejudikat företräde, vid oenighet äger Straße utslagsröst såvida inte grovt jäv föreligger.
             </div>
 
             <h2 id="kap1" class="kapitel-rubrik">1 kap. Inledande bestämmelser</h2>
-            
             <div class="paragraf">
                 <span class="paragraf-nr">1 §</span> Gurschbalken (GB) är tillämplig vid ett parti gursch med 2 eller fler deltagare varav samtliga från Juristprogrammet på Lunds universitet.
                 <span class="stycke">Vid spel med utomstående ska reglerna i denna balk tillämpas ifall de övriga spelarna informerats om detta samt att majoriteten av spelarna går på Juristprogrammet på Lunds universitet.</span>
             </div>
-
+            <div class="paragraf">
+                <span class="paragraf-nr">2 §</span> Lagen är primär och vad som stadgas i andra lagar gäller ej vid tillämpning av denna balk om inte annat avtalats eller föreskrivs i brottsbalken.
+            </div>
             <div class="paragraf">
                 <span class="paragraf-nr">3 §</span> Definitioner:
                 <span class="stycke"><b>Damer:</b> Är Willys (Självscanning).</span>
                 <span class="stycke"><b>Knegtar:</b> Är Victor Cream (Krämer).</span>
                 <span class="stycke"><b>Flopp:</b> Är det sista kortet som tilldelas var och en i partiet och kortet ska vara synligt för alla.</span>
                 <span class="stycke"><b>Sak:</b> När man tvingas lägga sitt lägsta kort som svar.</span>
+                <span class="stycke"><b>Slask/Kask:</b> När en spelare byter samtliga kort på handen utan att ha vunnit floppen.</span>
+                <span class="stycke"><b>Doffel/Triffel/Fyrpel/Fempel:</b> Antal kort av samma värde eller en sjua som spelas tillsammans.</span>
             </div>
 
             <h2 id="kap2" class="kapitel-rubrik">2 kap. Spelets utformning</h2>
+            <div class="paragraf">
+                <span class="paragraf-nr">1 §</span> Vinner gör den som går ut på det lägsta värdet. Vid utfallet att två eller fler spelare går ut på samma lägsta värde ska ett mini-game avgöra vem av dem som vinner.
+            </div>
+            <div class="paragraf">
+                <span class="paragraf-nr">2 §</span> Förlorar gör den eller de som går ut på det högsta värdet. Om avtalat ska ett mini-game avgöra vem som förlorar vid dött lopp.
+            </div>
+            <div class="paragraf">
+                <span class="paragraf-nr">3 §</span> Varje spelare ska tilldelas 5 kort. Varje kort ska givas stängt och det sista kortet (floppen) ska givas öppen för samtliga spelare.
+                <span class="stycke">Om ett stängt kort blir visuellt för majoriteten och felet inte beror på mottagaren, får nytt kort begäras eller accepteras som öppet kort.</span>
+            </div>
             <div class="paragraf">
                 <span class="paragraf-nr">4 §</span> Spelaren med högst värde på sitt öppna kort har vunnit floppen. Floppvinnaren bestämmer om och hur många kort varje spelare får möjlighet att byta i sin tilldelade hand.
                 <span class="stycke">1 st. Vad som sägs i första stycket har inte betydelse för en spelare med samtliga kort under knekt (slask). Den som väljer att slaska tilldelas fem nya stängda kort.</span>
                 <span class="stycke">2 st. Vad som sägs i första stycket har inte betydelse för en spelare med samtliga kort mellan kung och knekt (kask). Den som väljer att kaska tilldelas fem nya stängda kort.</span>
                 <span class="stycke">3 st. Vad som sägs i andra och tredje stycket blir endast tillämpligt om spelaren inte har bytt några kort tidigare under rundan och ifall rundan inte har påbörjats genom att floppvinnaren spelat ett eller flera kort.</span>
             </div>
+            <div class="paragraf">
+                <span class="paragraf-nr">5 §</span> Rundan påbörjas efter byten. Vid förtida spel från floppvinnaren äger övriga spelare rätt till skälig tid för byten.
+            </div>
+            <div class="paragraf">
+                <span class="paragraf-nr">6 §</span> Vid byte av 1-2 kort sker utdelning öppet. Spelaren äger rätt att neka öppna kort mot stängda dito.
+            </div>
 
+            <h2 id="kap3" class="kapitel-rubrik">3 kap. Mini-game</h2>
+            <div class="paragraf">
+                <span class="paragraf-nr">1 §</span> Vid utfall enligt 2 kap. 1 § 2 st eller 2 § 2 st ska ett Mini-game avgöra utfallet.
+                <span class="stycke">Varje spelare tilldelas 3 kort. E contrario tolkning tillämpas: alla regler för vanligt parti gäller utom de som undantas i paragrafen.</span>
+            </div>
             <div style="height: 400px;"></div>
         </div>
 
@@ -167,17 +142,15 @@
             <div class="ref-box">
                 <div class="ref-header"><span>Vägledande avgörande</span></div>
                 <div class="ref-content">
-                    <b style="color:#fff; font-size:12px;">NJA 2025 s. 133</b>
+                    <b style="color:#fff;">NJA 2025 s. 133</b>
                     <p style="color:#888; margin: 5px 0;">"Påstraßningen i Gröna Tornrummet"</p>
                     <div style="border-top: 1px solid #333; margin: 10px 0; padding-top: 10px; color: #bbb; font-style: italic;">
-                        <b>Sammanfattning:</b> HD fastställer att Straßes utslagsröst är en hörnsten för spelets stabilitet. Jäv kan endast anses som "grovt" vid bevisad manipulation eller systematisk partiskhet.
+                        <b>Sammanfattning:</b> HD fastställer att Straßes utslagsröst är en hörnsten för spelets stabilitet.
                     </div>
                     <a href="rattsfall.html" style="color: #448aff; text-decoration: underline; font-weight: bold;">Läs hela rättsfallet →</a>
                 </div>
             </div>
         </div>
-
     </div>
-
 </body>
 </html>

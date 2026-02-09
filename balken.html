@@ -2,52 +2,9 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurschbalken (2026:123)</title>
-    <style>
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-        body { font-family: Arial, sans-serif; margin: 0; background-color: #000; color: #eee; }
-
-        /* NAVIGATION ÖVERST */
-        nav.top-bar {
-            background: #ffffff; padding: 12px 40px; display: flex; gap: 25px; 
-            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #ddd;
-        }
-        nav.top-bar a { color: #666; text-decoration: none; font-size: 14px; }
-        nav.top-bar a.active { color: #000; font-weight: bold; border-bottom: 2px solid #000; }
-
-        .page-wrapper { display: flex; justify-content: space-between; }
-
-        /* MENYER */
-        .sidebar-left {
-            width: 220px; position: fixed; top: 45px; height: calc(100vh - 45px);
-            background: #000; border-right: 1px solid #222; padding: 20px; font-size: 11px; overflow-y: auto;
-        }
-        .sidebar-left h2 { font-size: 13px; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
-        .sidebar-left a { display: block; color: #888; text-decoration: none; margin-bottom: 8px; }
-        .sidebar-left a:hover { color: #fff; text-decoration: underline; }
-
-        .sidebar-right {
-            width: 280px; position: fixed; right: 0; top: 45px; height: calc(100vh - 45px);
-            padding: 20px; border-left: 1px solid #222; background: #050505;
-        }
-
-        /* HUVUDTEXT */
-        .main-content { margin-left: 260px; margin-right: 320px; max-width: 700px; padding: 40px; }
-        h1 { font-size: 26px; color: #fff; margin-bottom: 5px; }
-        .abbr { color: #666; font-size: 14px; margin-bottom: 30px; }
-        .meta { font-size: 12px; color: #888; margin-bottom: 20px; line-height: 1.6; }
-        .meta b { color: #aaa; width: 100px; display: inline-block; }
-        .yellow-box { background: #fff9c4; color: #000; padding: 15px; margin-bottom: 30px; font-size: 13px; border-left: 5px solid #f1c40f; }
-        h2.kapitel-rubrik { border-top: 1px solid #333; padding-top: 30px; margin-top: 50px; color: #fff; font-size: 20px; }
-        .paragraf { margin-bottom: 25px; line-height: 1.7; }
-        .paragraf-nr { font-weight: bold; color: #fff; margin-right: 10px; }
-        .stycke { display: block; margin-top: 10px; margin-left: 35px; color: #bbb; }
-        .principer { border: 1px solid #444; padding: 15px; margin-bottom: 30px; font-style: italic; font-size: 13px; color: #aaa; background: #080808; }
-
-        .ref-box { border: 1px solid #333; background: #111; margin-bottom: 20px; font-size: 11px; }
-        .ref-header { background: #222; padding: 6px 10px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; color: #fff; font-weight: bold; }
-        .ref-content { padding: 10px; color: #448aff; line-height: 1.4; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -57,7 +14,7 @@
         <a href="rattsfall.html">Rättsfall</a>
         <a href="forarbeten.html">Förarbeten</a>
         <a href="begrepp.html">Begrepp</a>
-        <a href="blogg.html" class="active">Nyheter</a>
+        <a href="blogg.html">Nyheter</a>
     </nav>
 
     <div class="page-wrapper">
@@ -136,30 +93,27 @@
                 <span class="paragraf-nr">1 §</span> Vid utfall enligt 2 kap. 1 § 2 st eller 2 § 2 st ska ett Mini-game avgöra utfallet.
                 <span class="stycke">Varje spelare tilldelas 3 kort. E contrario tolkning tillämpas: alla regler för vanligt parti gäller utom de som undantas i paragrafen.</span>
             </div>
+            
             <div style="height: 400px;"></div>
         </div>
 
         <div class="sidebar-right">
             <div class="ref-box">
+                <div class="ref-header">NJA 2025 s. 133</div>
                 <div class="ref-content">
-                    <b style="color:#fff;">NJA 2025 s. 133</b>
-                    <p style="color:#888; margin: 5px 0;">"Påstraßningen i Gröna Tornrummet"</p>
-                    <div style="border-top: 1px solid #333; margin: 10px 0; padding-top: 10px; color: #bbb; font-style: italic;">
-                        <b>Sammanfattning:</b> HD fastställer att Straßes utslagsröst är en hörnsten för spelets stabilitet.
-                    </div>
-                    <a href="nja2025s133.html" style="color: #448aff; text-decoration: underline; font-weight: bold;">Läs hela rättsfallet →</a>
+                    "Påstraßningen i Gröna Tornrummet"<br>
+                    <span style="color: #888; font-style: italic;">HD fastställer att Straßes utslagsröst är en hörnsten för spelets stabilitet.</span>
+                    <a href="nja2025s133.html">Läs hela rättsfallet →</a>
                 </div>
-            </div> <div class="ref-box">
-               <div class="ref-header"><span></span></div>
+            </div>
+
+            <div class="ref-box">
+                <div class="ref-header">NJA 2024 s. 980</div>
                 <div class="ref-content">
-                    <b style="color:#fff; font-size:12px;">NJA 2024 s. 980</b>
-                    <p style="color:#888; margin: 5px 0;">”Dealer’s fault”</p>
-                    <div style="border-top: 1px solid #333; margin: 10px 0; padding-top: 10px; color: #bbb; font-style: italic;">
-                        <b>Sammanfattning:</b> HD klargör ansvarsfördelningen vid kortgivning. Procedurfel av dealern ger valrätt, medan spelares egen iver faller utanför ansvaret.
-                    </div>
-                <a href="nja2024s980.html" style="color: #448aff; text-decoration: underline; font-weight: bold;">Läs hela rättsfallet →</a>
-                    </div>
-                </div> </div>
+                    "Dealer’s fault"<br>
+                    <span style="color: #888; font-style: italic;">HD klargör ansvarsfördelningen vid kortgivning.</span>
+                    <a href="nja2024s980.html">Läs hela rättsfallet →</a>
+                </div>
             </div>
         </div>
     </div>

@@ -33,10 +33,11 @@
         .side-graph {
             flex: 1;
             background: rgba(20, 20, 20, 0.8); 
-            padding: 25px;
+            padding: 20px;
             border-radius: 30px;
             border: 1px solid rgba(212, 175, 55, 0.2);
             box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            /* Denna rad döljer allt som sticker ut ur boxen */
             overflow: hidden; 
             display: flex;
             flex-direction: column;
@@ -45,10 +46,13 @@
 
         .side-graph iframe {
             width: 100%;
-            height: 380px;
+            /* Ökad höjd för att rymma hela diagrammet utan scroll */
+            height: 420px; 
             border: none !important;
             display: block;
             margin: 0 auto;
+            /* Tvingar bort scroll-interaktioner */
+            pointer-events: auto; 
         }
 
         .logo-center {
@@ -67,7 +71,7 @@
             color: #d4af37;
             font-family: 'Times New Roman', serif;
             font-size: 0.9rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 4px;
             font-weight: bold;
@@ -85,13 +89,6 @@
             letter-spacing: 8px;
             margin: 0;
             font-weight: normal;
-        }
-
-        .welcome-section p {
-            color: #555;
-            font-style: italic;
-            letter-spacing: 2px;
-            margin-top: 10px;
         }
 
         @media (max-width: 1100px) {
@@ -114,7 +111,7 @@
             
             <div class="side-graph">
                 <div class="graph-title">🥇 Medaljfördelning</div>
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=912595502&format=interactive"></iframe>
+                <iframe scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=912595502&format=interactive"></iframe>
             </div>
 
             <div class="logo-center">
@@ -123,14 +120,14 @@
 
             <div class="side-graph">
                 <div class="graph-title">📈 Poängutveckling</div>
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=2080905604&format=interactive"></iframe>
+                <iframe scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=2080905604&format=interactive"></iframe>
             </div>
 
         </div>
 
         <div class="welcome-section">
             <h1>L.A.G.S.</h1>
-            <p>Alea Iacta Est — 2026</p>
+            <p style="color: #555; font-style: italic; letter-spacing: 2px;">Alea Iacta Est — 2026</p>
         </div>
     </div>
 

@@ -1,0 +1,285 @@
+/* =========================================
+   GRUNDLÄGGANDE STIL (BAS)
+   ========================================= */
+body {
+    font-family: Arial, sans-serif; /* Standardtypsnitt för läsbarhet */
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Svart bakgrund */
+    color: #eee; /* Ljusgrå text för kontrast */
+    line-height: 1.6;
+}
+
+a {
+    color: #448aff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   NAVIGATION (Menyn högst upp)
+   ========================================= */
+.top-bar {
+    background: #ffffff;
+    padding: 12px 20px; /* Lite mindre padding på mobiler */
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap; /* Gör att menyn bryts snyggt på små skärmar */
+    justify-content: center; /* Centrera menyn */
+}
+
+.top-bar a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.top-bar a:hover {
+    color: #000;
+}
+
+.top-bar .active {
+    color: #000;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+/* =========================================
+   STARTSIDAN (index.html)
+   ========================================= */
+/* Dessa klasser används bara på startsidan för att centrera allt */
+body.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #050505;
+    font-family: 'Times New Roman', serif; /* Akademisk känsla */
+}
+
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.main-logo {
+    width: 280px;
+    height: auto;
+    max-width: 80%; /* För mobiler */
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(68, 138, 255, 0.15); /* Svag blå glöd */
+}
+
+.home-title {
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    color: #888;
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.nav-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    padding: 12px 25px;
+    border: 1px solid #333;
+    background: transparent;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.4s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial, sans-serif; /* Lättläst på knappar */
+}
+
+.nav-button:hover {
+    background: #eee;
+    color: #000;
+    border-color: #eee;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+.footer-note {
+    position: absolute;
+    bottom: 20px;
+    font-size: 11px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+}
+
+/* =========================================
+   INNEHÅLL (Blogg & Balken)
+   ========================================= */
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 28px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Blogginlägg */
+.post {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #222;
+}
+
+.post-date {
+    color: #555;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.post-title {
+    color: #448aff;
+    font-size: 24px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    margin: 25px 0;
+    border: 1px solid #333;
+    display: block;
+}
+
+/* =========================================
+   RANKING LISTA (Guld, Silver, Brons)
+   ========================================= */
+.ranking-box {
+    background: #111;
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 4px;
+}
+
+.ranking-title {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: block;
+    border-bottom: 1px solid #222;
+    padding-bottom: 8px;
+}
+
+.ranking-list { list-style: none; padding: 0; margin: 0; }
+
+.ranking-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.ranking-item:last-child { border-bottom: none; }
+
+.rank-num {
+    font-weight: bold;
+    margin-right: 15px;
+    width: 20px;
+    text-align: right;
+}
+
+.rank-1 { color: #ffd700; text-shadow: 0 0 5px rgba(255, 215, 0, 0.3); } /* Guld */
+.rank-2 { color: #c0c0c0; } /* Silver */
+.rank-3 { color: #cd7f32; } /* Brons */
+
+/* =========================================
+   VIDEO (Responsiv Vimeo/YouTube)
+   ========================================= */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 177.78%; /* 9:16 format (stående mobil) */
+    /* Använd 56.25% för liggande video (16:9) */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background: #111;
+    border: 1px solid #222;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+    border-left: 3px solid #448aff;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+/* =========================================
+   MOBILANPASSNING
+   ========================================= */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 20px;
+    }
+    
+    .top-bar {
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    h1 { font-size: 24px; }
+    .post-title { font-size: 20px; }
+    
+    /* Justering för startsidan på små skärmar */
+    .home-title { font-size: 24px; letter-spacing: 1px; }
+    .sub-title { font-size: 14px; }
+}

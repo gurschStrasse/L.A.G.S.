@@ -6,75 +6,73 @@
     <title>L.A.G.S. - Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Mjukare styling för dashboarden */
         body {
-            background-color: #0b0e11; /* Lite mjukare svart/grå */
-            display: block; /* Återställer från home-page flex */
+            background-color: #0b0e11; 
+            display: block;
         }
 
         .dashboard-wrapper {
-            max-width: 1200px;
+            max-width: 1300px; /* Gjorde sidan lite bredare för att ge graferna plats */
             margin: 40px auto;
             padding: 20px;
         }
 
         .dashboard-header {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Ändrat från center till start för bättre flöde */
             justify-content: space-between;
-            gap: 30px;
+            gap: 20px;
             margin-bottom: 50px;
         }
 
         .side-graph {
             flex: 1;
             background: rgba(255, 255, 255, 0.03);
-            padding: 25px;
-            border-radius: 20px; /* Mycket mjukare hörn */
-            border: 1px solid rgba(212, 175, 55, 0.3); /* Subtil guldram */
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
+            min-height: 450px; /* Tvingar boxen att vara tillräckligt hög */
         }
 
-        .side-graph:hover {
-            transform: translateY(-5px); /* Liten mjuk animation */
-            border-color: rgba(212, 175, 55, 0.6);
+        /* Denna del fixar croppningen genom att tvinga iframen att andas */
+        .side-graph iframe {
+            width: 100%;
+            height: 400px; /* Ökad höjd för att slippa croppning */
+            border: none;
         }
 
         .logo-center {
-            flex: 0 0 220px;
+            flex: 0 0 200px;
             text-align: center;
+            margin-top: 50px; /* Flyttar ner loggan så den hamnar i mitten av grafernas höjd */
         }
 
         .logo-center img {
             width: 100%;
             height: auto;
-            border-radius: 50%;
             filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2));
         }
 
         .graph-title {
             color: #d4af37;
             font-family: 'Times New Roman', serif;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
             text-align: center;
             letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            text-transform: uppercase;
         }
 
         .welcome-text {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 40px;
             font-family: 'Times New Roman', serif;
         }
 
         .welcome-text h1 {
             color: #d4af37;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
             letter-spacing: 2px;
         }
@@ -82,19 +80,24 @@
         .welcome-text p {
             color: #888;
             font-style: italic;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.6;
         }
 
-        /* Mobilanpassning */
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
             .dashboard-header {
                 flex-direction: column;
+                align-items: center;
             }
             .logo-center {
                 order: -1;
-                width: 150px;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+            .side-graph {
+                width: 100%;
+                min-height: auto;
             }
         }
     </style>
@@ -111,8 +114,8 @@
         <div class="dashboard-header">
             
             <div class="side-graph">
-                <div class="graph-title"><span>🥇</span> Medaljligan</div>
-                <iframe width="100%" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=912595502&format=interactive"></iframe>
+                <div class="graph-title">🥇 Medaljligan</div>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=912595502&format=interactive"></iframe>
             </div>
 
             <div class="logo-center">
@@ -120,8 +123,8 @@
             </div>
 
             <div class="side-graph">
-                <div class="graph-title"><span>📈</span> Aktuell Ranking</div>
-                <iframe width="100%" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=2080905604&format=interactive"></iframe>
+                <div class="graph-title">📈 Aktuell Ranking</div>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=2080905604&format=interactive"></iframe>
             </div>
 
         </div>

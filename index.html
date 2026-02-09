@@ -3,30 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunds Akademiska Gurschsällskap</title>
-    
-    <meta property="og:title" content="L.A.G.S.">
-    <meta property="og:description" content="Lunds Akademiska Gurschsällskap – Officiell hemsida.">
-    <meta property="og:image" content="logga.png">
-
+    <title>L.A.G.S. - Huvudsida</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dashboard Layout */
+        .dashboard-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .side-graph {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid #d4af37; /* Guldram */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            min-width: 320px;
+        }
+
+        .logo-center {
+            flex: 0 0 250px;
+            text-align: center;
+        }
+
+        .logo-center img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+        }
+
+        .graph-title {
+            color: #d4af37;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* Mobilanpassning */
+        @media (max-width: 1100px) {
+            .dashboard-container {
+                flex-direction: column;
+            }
+            .logo-center {
+                order: -1;
+                width: 200px;
+            }
+            .side-graph {
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+    </style>
 </head>
-<body class="home-page">
+<body>
 
-    <div class="logo-container">
-        <img src="logga.png" alt="Societas Academica Gursch Lundensis" class="main-logo">
+    <nav>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="blogg.html">Blogg</a></li>
+            <li><a href="balken.html">Balken</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard-container">
+        
+        <div class="side-graph">
+            <div class="graph-title">🥇 Medaljligan</div>
+            <iframe width="100%" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=912595502&format=interactive"></iframe>
+        </div>
+
+        <div class="logo-center">
+            <img src="logga.png" alt="L.A.G.S. Logotyp">
+        </div>
+
+        <div class="side-graph">
+            <div class="graph-title">📈 Aktuell Ranking</div>
+            <iframe width="100%" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=2080905604&format=interactive"></iframe>
+        </div>
+
     </div>
 
-    <h1 class="home-title">L. A. G. S.</h1>
-    <div class="sub-title">Lunds Akademiska Gurschsällskap</div>
-    
-    <div class="nav-box">
-        <a href="balken.html" class="nav-button">Gurschbalken</a>
-        <a href="blogg.html" class="nav-button">Nyheter & Blogg</a>
-    </div>
-
-    <div class="footer-note">
-        Lundensis Academia | Alea Iacta Est | 2026
+    <div class="content" style="text-align: center; margin-top: 30px;">
+        <h1 style="color: #d4af37; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Välkommen till L.A.G.S.</h1>
+        <p style="color: #fff; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+            Följ ligan live! Graferna uppdateras automatiskt varje gång nya resultat matas in i kalkylarket. 
+            Använd muspekaren över graferna för att se detaljerad statistik för varje spelare.
+        </p>
     </div>
 
 </body>

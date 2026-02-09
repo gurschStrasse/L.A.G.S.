@@ -3,97 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L.A.G.S. - Huvudsida</title>
+    <title>L.A.G.S. - Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Dashboard Layout */
-        .dashboard-container {
+        /* Mjukare styling för dashboarden */
+        body {
+            background-color: #0b0e11; /* Lite mjukare svart/grå */
+            display: block; /* Återställer från home-page flex */
+        }
+
+        .dashboard-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .dashboard-header {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1400px;
-            margin: 40px auto;
-            padding: 0 20px;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 50px;
         }
 
         .side-graph {
             flex: 1;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 15px;
-            border-radius: 15px;
-            border: 1px solid #d4af37; /* Guldram */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            min-width: 320px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            border-radius: 20px; /* Mycket mjukare hörn */
+            border: 1px solid rgba(212, 175, 55, 0.3); /* Subtil guldram */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .side-graph:hover {
+            transform: translateY(-5px); /* Liten mjuk animation */
+            border-color: rgba(212, 175, 55, 0.6);
         }
 
         .logo-center {
-            flex: 0 0 250px;
+            flex: 0 0 220px;
             text-align: center;
         }
 
         .logo-center img {
             width: 100%;
             height: auto;
-            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+            border-radius: 50%;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2));
         }
 
         .graph-title {
             color: #d4af37;
-            font-size: 1.1rem;
-            margin-bottom: 12px;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
             text-align: center;
-            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .welcome-text {
+            text-align: center;
+            margin-top: 60px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .welcome-text h1 {
+            color: #d4af37;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
             letter-spacing: 2px;
-            font-weight: bold;
+        }
+
+        .welcome-text p {
+            color: #888;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
         /* Mobilanpassning */
-        @media (max-width: 1100px) {
-            .dashboard-container {
+        @media (max-width: 900px) {
+            .dashboard-header {
                 flex-direction: column;
             }
             .logo-center {
                 order: -1;
-                width: 200px;
-            }
-            .side-graph {
-                width: 100%;
-                max-width: 600px;
+                width: 150px;
             }
         }
     </style>
 </head>
 <body>
 
- <nav class="top-bar">
-    <a href="index.html" class="active">L.A.G.S.</a>
-    <a href="balken.html">Lagar</a>
-    <a href="blogg.html">Nyheter</a>
-</nav>
+    <nav class="top-bar">
+        <a href="index.html" class="active">L.A.G.S.</a>
+        <a href="balken.html">Lagar</a>
+        <a href="blogg.html">Nyheter</a>
+    </nav>
 
-    <div class="dashboard-container">
-        
-        <div class="side-graph">
-            <div class="graph-title">🥇 Medaljligan</div>
-            <iframe width="100%" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=2080905604&format=interactive"></iframe>
+    <div class="dashboard-wrapper">
+        <div class="dashboard-header">
+            
+            <div class="side-graph">
+                <div class="graph-title"><span>🥇</span> Medaljligan</div>
+                <iframe width="100%" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=912595502&format=interactive"></iframe>
+            </div>
+
+            <div class="logo-center">
+                <img src="logga.png" alt="L.A.G.S. Logotyp">
+            </div>
+
+            <div class="side-graph">
+                <div class="graph-title"><span>📈</span> Aktuell Ranking</div>
+                <iframe width="100%" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=2080905604&format=interactive"></iframe>
+            </div>
+
         </div>
 
-        <div class="logo-center">
-            <img src="logga.png" alt="L.A.G.S. Logotyp">
+        <div class="welcome-text">
+            <h1>Välkommen till L.A.G.S.</h1>
+            <p>Lunds Akademiska Gurschsällskap – där tradition möter strategi. Följ ligans utveckling live genom våra interaktiva grafer.</p>
         </div>
-
-        <div class="side-graph">
-            <div class="graph-title">📈 Aktuell Ranking</div>
-            <iframe width="100%" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRB-UIe2ndJqYQao6L_7grvOkT5qcOnVf8GIBAbJ1x04S2TiqRGu_cx_2LqHG78NppDac7waxoehDM6/pubchart?oid=912595502&format=interactive"></iframe>
-        </div>
-
-    </div>
-
-    <div class="content" style="text-align: center; margin-top: 30px;">
-        <h1 style="color: #d4af37; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Välkommen till L.A.G.S.</h1>
-        <p style="color: #fff; max-width: 700px; margin: 0 auto; line-height: 1.6;">
-        </p>
     </div>
 
 </body>

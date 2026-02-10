@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Allmänna Gurschfonden – L.A.G.S.</title>
+    <style>
+        body { 
+            font-family: 'Times New Roman', serif; 
+            margin: 0; 
+            background-color: #050505; 
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* NAVIGATION BAR */
+        .top-bar {
+            background: #ffffff; 
+            padding: 12px 40px; 
+            display: flex; 
+            gap: 25px; 
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .top-bar a { color: #666; text-decoration: none; font-size: 14px; font-family: Arial, sans-serif; }
+        .top-bar .active { color: #000; font-weight: bold; }
+
+        .container {
+            padding: 100px 20px 40px 20px;
+            max-width: 800px;
+        }
+
+        h1 { font-size: 32px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; }
+
+        /* SKÄRM-DESIGN (likt bilden) */
+        .debt-display {
+            background: #111;
+            border: 4px solid #cc0000; /* Röd ram likt bilden */
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 20px rgba(204, 0, 0, 0.2);
+        }
+
+        .debt-label {
+            background: #cc0000;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .amount {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: clamp(30px, 8vw, 60px);
+            color: #ff3333;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* DONATIONS-INFO */
+        .donate-box {
+            background: #111;
+            border: 1px solid #333;
+            padding: 25px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        .phone-number {
+            font-size: 24px;
+            color: #448aff;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .instruction { color: #888; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <nav class="top-bar">
+        <a href="index.html">Hem</a>
+        <a href="balken.html">Balken</a>
+        <a href="blogg.html">Nyheter</a>
+        <a href="fond.html" class="active">Gurschfonden</a>
+    </nav>
+
+    <div class="container">
+        <h1>Allmänna Gurschfonden</h1>
+
+        <div class="debt-display">
+            <div class="debt-label">Totalbalans</div>
+            <div class="amount" id="counter">$0</div>
+        </div>
+
+        <div class="donate-box">
+            <p>Vill du stötta sällskapets verksamhet?</p>
+            <span class="instruction">Swisha till:</span>
+            <span class="phone-number">070 508 01 33</span>
+            <p>Märk din betalning: <strong>"Allmänna Gurschfonden"</strong></p>
+            <p style="font-size: 14px; margin-top: 20px;">Tack för ditt bidrag.</p>
+        </div>
+    </div>
+
+    <script>
+        // ÄNDRA DENNA SUMMA MANUELLT HÄR:
+        const targetAmount = 38669; 
+
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentVal = Math.floor(progress * (end - start) + start);
+                obj.innerHTML = "$" + currentVal.toLocaleString('sv-SE');
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const obj = document.getElementById("counter");
+        // Startar animationen (från 0 till targetAmount under 2 sekunder)
+        animateValue(obj, 0, targetAmount, 2000);
+    </script>
+
+</body>
+</html>

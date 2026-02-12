@@ -2,137 +2,124 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NJA 2025 s. 133 — Gurschbalken</title>
+    <title>NJA 2025 s. 133 – L.A.G.S. Rättsfall</title>
     <style>
         body { 
-            font-family: Georgia, serif; 
+            font-family: 'Times New Roman', serif; 
+            background-color: #f4f1ea; 
+            color: #1a1a1a; 
             line-height: 1.6; 
             margin: 0; 
-            background-color: #000; 
-            color: #ccc;
-            display: flex;
+            padding: 0; 
+        }
+
+        /* NAVIGATION BAR */
+        .top-bar {
+            background: #ffffff; 
+            padding: 12px 0; 
+            display: flex; 
+            gap: 25px; 
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            width: 100%;
             justify-content: center;
+            z-index: 1000;
         }
-        .wrapper {
+        .top-bar a { color: #666; text-decoration: none; font-size: 14px; font-family: Arial, sans-serif; }
+        .top-bar .active { color: #000; font-weight: bold; }
+
+        .document-container {
             max-width: 800px;
-            padding: 60px 40px;
-            background: #000;
-        }
-        .back-nav {
-            margin-bottom: 40px;
-        }
-        .back-nav a {
-            color: #888;
-            text-decoration: none;
-            font-size: 13px;
-            border: 1px solid #333;
-            padding: 8px 15px;
-            font-family: Arial, sans-serif;
-            transition: 0.2s;
-        }
-        .back-nav a:hover { background: #111; color: #fff; border-color: #666; }
-
-        h1 { font-family: Arial, sans-serif; font-size: 28px; color: #fff; margin-bottom: 5px; }
-        h2 { font-family: Arial, sans-serif; font-size: 18px; color: #666; margin-top: 0; font-weight: normal; }
-        
-        .section-title { 
-            font-family: Arial, sans-serif; 
-            color: #fff; 
-            font-size: 18px; 
-            border-bottom: 1px solid #333; 
-            padding-bottom: 5px; 
-            margin-top: 40px; 
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        p { margin-bottom: 20px; text-align: justify; }
-        
-        .list-item {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .list-item::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #448aff;
+            margin: 100px auto 60px;
+            background: white;
+            padding: 60px 80px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border: 1px solid #dcdcdc;
         }
 
-        .judgment-box {
-            background: #050505;
-            border-left: 3px solid #448aff;
-            padding: 2px 25px;
-            margin: 30px 0;
-        }
+        .header { text-align: center; border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 30px; }
+        .header h1 { margin: 0; font-size: 28px; text-transform: uppercase; letter-spacing: 2px; }
+        .header p { margin: 5px 0 0; font-style: italic; color: #444; }
 
-        .decision-block {
-            background: #111;
-            padding: 25px;
-            border: 1px solid #333;
-            color: #fff;
-            font-style: italic;
+        .case-meta { font-weight: bold; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+        h2 { font-size: 20px; border-bottom: 1px solid #333; padding-bottom: 5px; margin-top: 30px; }
+        h3 { font-size: 18px; margin-top: 25px; font-style: italic; }
+
+        .legal-text { text-align: justify; white-space: pre-line; }
+        
+        .dissenting-opinion {
             margin-top: 40px;
+            padding: 20px;
+            background: #fafafa;
+            border-left: 4px solid #999;
+            font-style: italic;
         }
+
+        .footer { text-align: center; margin-top: 40px; font-size: 12px; color: #888; text-transform: uppercase; }
+        
+        .back-link { display: inline-block; margin-top: 30px; color: #0044cc; text-decoration: none; font-family: Arial, sans-serif; font-size: 14px; }
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="back-nav">
-            <a href="balken.html">← TILLBAKA TILL GURSCHBALKEN</a>
+    <nav class="top-bar">
+        <a href="index.html">Hem</a>
+        <a href="balken.html">Balken</a>
+        <a href="blogg.html">Nyheter</a>
+        <a href="fond.html">Gurschfonden</a>
+    </nav>
+
+    <div class="document-container">
+        <div class="header">
+            <h1>Högsta Domstolen</h1>
+            <p>Societas Academica Gursch Lundensis – Prejudikatinstansen</p>
         </div>
 
-        <h1>NJA 2025 s. 133</h1>
-        <h2>„Påstraßningen i Gröna Tornrummet“</h2>
-
-        <div class="section-title">Bakgrund</div>
-        <p>
-            Gursch är ett spel med lång tradition vid Juridicum i Lund och bygger på ett omfattande förtroende- och sedvanerättssystem. Spelreglerna, som utvecklats och förfinats genom decennier, utgör en informell normflora som i praktiken fungerar som ett konsensusbaserat rättssystem bland deltagande studenter. Enligt gängse praxis tilldelas innehavaren av utslagsröst för Straße — den så kallade „Strasse“ — en avgörande roll i konflikter inom Gursch, särskilt för att undvika utdragna och ofruktbara dispytprocesser.
-        </p>
-        <p>
-            Under en spelomgång i Gröna Tornrummet uppstod en tvist om giltigheten i ett resultat, vilket ledde till ifrågasättande av Straßes agerande och därmed Straßes neutralitet.
-        </p>
-
-        <div class="section-title">Rättsfrågor</div>
-        <div class="list-item">Kan den ifrågasatta handläggningen från Straßes sida anses utgöra jäv?</div>
-        <div class="list-item">I vilken utsträckning kan jäv, i denna informella normmiljö, betraktas som „grovt“ så att Strasse bör fråntas sin utslagsrätt?</div>
-        <div class="list-item">Vilka rättsprinciper styr bedömningen av Straßes agerande i förhållande till Gursch-spelreglerna och gursch-sed?</div>
-
-        <div class="section-title">Högsta Domstolens bedömning</div>
-        <div class="judgment-box">
-            <p>
-                Högsta Domstolen konstaterar inledningsvis att Gursch-spelreglerna och den praktiska tillämpningen av dessa utgör ett etablerat normsystem bland Juridicums studenter och att principer såsom förtroende, opartiskhet och tradition spelar avgörande roll för systemets legitimitet. Straßes funktion definieras som en mekanism för slutgiltiga avgöranden vid tolkningsfrågor och konflikter inom spelet.
-            </p>
-            <p>
-                Rätten noterar att jäv i allmän rättsordning syftar till att förebygga intressekonflikter som kan påverka utfallet av en rättslig prövning. Enligt etablerad praxis inom Gursch innebär jäv att en person, på grund av personliga intressen eller stark partiskhet, inte kan anses agera objektivt.
-            </p>
-            <p>
-                I det föreliggande fallet har Käranden gjort gällande att Straßes handläggning i Gröna Tornrummet var partisk och därmed förenad med jäv, varför Straßes utslagsröst i den aktuella tvisten skulle sakna legitimitet.
-            </p>
-            <p>
-                Domstolen finner att det i det aktuella materialet inte föreligger tillräckliga bevis för att Strasse har handlat i strid med objektivitetsprincipen eller att han har låtit personliga intressen påverka sitt avgörande. Den dokumentation som åberopats visar i huvudsak diskussioner om tolkning av spelregler, vilka i sakförhållandets natur inrymmer olika civiliserade uppfattningar om vad som är rätt.
-            </p>
-            <p>
-                Domstolen betonar vidare att jäv enbart kan anses som grovt om det föreligger bevisad manipulation av spelresultat, systematisk partiskhet eller uppenbart partiska beslut som strider mot Gursch-spelreglernas anda. I detta fall saknas sådana indicier helt.
-            </p>
+        <div class="case-meta">
+            NJA 2025 s. 133 ("Subsidiaritetsmålet")
         </div>
 
-        <div class="section-title">Domskäl</div>
-        <p>Mot denna bakgrund anser Högsta Domstolen att:</p>
-        <div class="list-item">Strasse agerat inom ramen för sina befogenheter enligt gursch-sed.</div>
-        <div class="list-item">Det inte föreligger tillräckliga skäl att anse att Straßes handläggning varit partisk i sådan mening att jäv uppstått.</div>
-        <div class="list-item">De procedurprinciper som följer av Gursch-spelens informella normsystem inte har åsidosatts på ett sätt som kan rubriceras som „grovt jäv“.</div>
-        <p>
-            Domstolen noterar att syftet med utslagsrösten är att upprätthålla stabilitet och undvika långdragna processer, och att detta ändamål inte har motbevisats i den aktuella tvisten.
-        </p>
+        <div class="legal-text">
+            <h2>Högsta Domstolens domskäl</h2>
+            
+            <h3>1. Utgångspunkter</h3>
+            Gurschbalken utgör ett internt normsystem avsett att reglera spelets struktur, procedur och rättsverkningar. Av balkens systematik följer att den är subsidiär endast till brottsbalken. Subsidiaritetsregeln aktualiseras när en situation rättsligt sett måste bedömas uteslutande enligt brottsbalkens normer. 
 
-        <div class="section-title">Domslut</div>
-        <div class="decision-block">
-            Högsta Domstolen avslår Kärandens talan. Straßes utslagsröst i den aktuella tvisten i Gröna Tornrummet ska anses giltig, och tvisten ska anses slutligt avgjord i enlighet med gursch-spelreglernas anda och praxis.
+            Frågan är således inte om ett klandervärt beteende förekommit, utan om situationen i sin helhet faller utanför Gurschbalkens normativa räckvidd.
+
+            <h3>2. Love of the game</h3>
+            Gurschbalken innehåller inte någon bestämmelse som inskränker spelares strategiska handlingsutrymme utöver vad som uttryckligen följer av spelreglernas struktur. 
+
+            En love of the game, även när den är taktiskt hänsynslös eller socialt provocerande, utgör inte i sig ett regelbrott. Så länge spelet bedrivs inom de formella ramar som uppställs i balken föreligger inte grund för ogiltighet eller sanktion. Perssons agerande kan därför inte anses stå i strid med Gurschbalken.
+
+            <h3>3. Våldet och subsidiaritetsregeln</h3>
+            Det är ostridigt att Straße brukat fysiskt våld mot Persson. Frågan är om detta medför att Gurschbalken måste träda tillbaka med hänvisning till dess subsidiaritet i förhållande till brottsbalken. 
+
+            Subsidiaritetsregeln innebär inte att varje handling som teoretiskt skulle kunna omfattas av brottsbalken automatiskt undantränger Gurschbalkens tillämplighet i dess helhet. Avgörande är om den situation som prövas i målet i huvudsak är av straffrättslig karaktär eller om den alltjämt är förankrad i spelets interna normstruktur. 
+
+            I förevarande fall har våldet uppkommit i direkt och omedelbar anslutning till en pågående gurschomgång. Det saknas uppgifter om planering, systematik eller självständig konflikt utanför spelets ram. Spelet återupptogs efter händelsen. 
+
+            Den rättsliga prövningen i detta mål avser i första hand love of the game och dess förenlighet med Gurschbalken. Våldet utgör en reaktion på denna spelåtgärd och har ett omedelbart samband med spelets genomförande. Mot denna bakgrund kan situationen inte anses ha övergått till att uteslutande vara av brottsbalkskaraktär. Gurschbalkens tillämplighet kvarstår.
+
+            <h2>Domslut</h2>
+            Högsta Domstolen finner att Perssons love of the game varit förenlig med Gurschbalken. Straßes våldsanvändning medför inte att Gurschbalken träder tillbaka enligt subsidiaritetsregeln. Situationen ska bedömas inom ramen för Gurschbalken.
+        </div>
+
+        <div class="dissenting-opinion">
+            <h3>Skiljaktig mening</h3>
+            Justitierådet Persson var skiljaktig och anförde: 
+            
+            Gurschbalken är enligt sin konstruktion subsidiär endast till brottsbalken. Denna normhierarki förutsätter att när en gärning objektivt faller inom brottsbalkens tillämpningsområde ska Gurschbalken träda tillbaka. Det är ostridigt att Straße brukat fysiskt våld mot Persson. En sådan gärning är av straffrättslig natur och kan inte reduceras till en intern spelreaktion. 
+
+            Majoriteten gör bedömningen beroende av våldets samband med spelet. Enligt min mening är detta en sammanblandning av kausalitet och normhierarki. Att en gärning har sin bakgrund i ett spel förändrar inte dess rättsliga karaktär. När våld förekommer är subsidiaritetsregeln direkt tillämplig. Gurschbalken kan inte samtidigt utgöra primär normgrund. Jag anser därför att Gurschbalken i denna situation måste träda tillbaka.
+        </div>
+
+        <a href="balken.html" class="back-link">← Tillbaka till Gurschbalken</a>
+
+        <div class="footer">
+            S.A.G.L. | LUNDENSIS ACADEMIA | 2026
         </div>
     </div>
 
